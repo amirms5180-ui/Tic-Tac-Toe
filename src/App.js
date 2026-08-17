@@ -95,7 +95,7 @@ export default function App() {
       </button>
 
     </div>
-       <div>
+       <div className="winner">
       {winner && <h2>{winner} Winner!</h2>}
         </div>
       </div>
