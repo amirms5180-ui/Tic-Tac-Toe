@@ -104,6 +104,8 @@ h3 {
   display: grid;
   grid-template-columns: repeat( 3 ,1fr);
   width: fit-content;
+  align-items: center;
+  justify-content: center;
  }
  .squad{
  width: 100px
