@@ -62,12 +62,13 @@ export default function App() {
   }
   function wichPlayer(){
     const winner = winnerHandler(squares);
-    if(winner)
-      if( winner=== "O"){return "player O is win "}
+    console.log(winner)
+    console.log(squares)
+    if(winner){
+      if( winner.player=== "O"){return "player O is win "}
     else{return"player X is win"}
     
-    
-  }
+  }}
   const winner = winnerHandler(squares);
 
   return (
@@ -92,7 +93,7 @@ export default function App() {
           <button className="resetbtn"  onClick={()=>{resetHandler()}}>Reset</button>
         </div>
        <div className="winner">
-      { wichPlayer && <h2>{ wichPlayer()}  </h2>}
+      { wichPlayer() && <h2>{ wichPlayer()}  </h2>}
         </div>
         
       </div>
