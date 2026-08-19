@@ -13,6 +13,7 @@ const messages = [
 body {
   font-family: sans-serif;
   color: #333;
+  background-color: #111;
 }
 
 .steps {
@@ -100,6 +101,12 @@ h3 {
 
 
 /* doza */
+
+.all{
+  background-color: #111;
+  color: #fff;
+  margin-top: 200px;
+}
  .table{
   display: grid;
   grid-template-columns: repeat( 3 ,1fr);
@@ -110,8 +117,25 @@ h3 {
  width: 100px
  ;
  height: 100px;
+ background-color: #111;
+ color: #ffffff;
+ border: 1px solid #fff;
+ 
  
  }
 .winner{
   text-align: center;
+
+}
+.resetbtn {
+  padding: 15px;
+  margin: 20px;
+  border-radius: 40px;
+  background-color: cadetblue;
+  border: 1px solid #111;
+}
+.resetbtn:hover{
+  
+  transform: translateY(8px);
+  box-shadow: aquamarine;
 }
