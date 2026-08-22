@@ -59,16 +59,25 @@ export default function App() {
     
     setSquares(nextSquares);
     setss(!ss);
+    if(nextSquares.every((squares)=>squares!==null)&& !winnerHandler(nextSquares)){
+      setTimeout(()=>resetHandler(),3000) ;
+    }
   }
-  function wichPlayer(){
-    const winner = winnerHandler(squares);
-    console.log(winner)
-    console.log(squares)
+
+
+  function wichPlayer(nn){
+    const winner = winnerHandler(nn);
+    
     if(winner){
       if( winner.player=== "O"){return "player O is win "}
     else{return"player X is win"}
+    }
+    if(nn.every((squares)=>squares!==null)&& !winner){
+      console.log("uby")
+      return "Draw!"
+    }
     
-  }}
+  }
   const winner = winnerHandler(squares);
 
   return (
@@ -93,7 +102,7 @@ export default function App() {
           <button className="resetbtn"  onClick={()=>{resetHandler()}}>Reset</button>
         </div>
        <div className="winner">
-      { wichPlayer() && <h2>{ wichPlayer()}  </h2>}
+      <h2>{ wichPlayer(squares)}  </h2>
         </div>
         
       </div>
